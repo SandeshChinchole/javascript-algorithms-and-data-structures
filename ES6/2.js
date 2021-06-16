@@ -1,6 +1,6 @@
 // Compare Scopes of the var and let Keywords
 
-function scope() {
+function checkScope() {
     let i = "function scope";
     if(true) {
         let i = "block scope";
@@ -9,3 +9,5 @@ function scope() {
     console.log("function scope i is: ", i);
     return i;
 }
+
+checkScope();
