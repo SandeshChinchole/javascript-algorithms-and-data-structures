@@ -1,14 +1,23 @@
 // Iterate Over All Properties
 
-const person = {
-    name: "ashley",
-    age: 21,
-    email: "ashley@email.com",
-    location: "nyc"
-}
-function returnProp(p1){
-    let prop = p1;
-    return prop;
+function Dog(name) {
+    this.name = name;
 }
 
-console.log(returnProp("keys"));
+Dog.prototype.numLegs = 4;
+
+let beagle = new Dog("Snoopy");
+
+let ownProps = [];
+let prototypeProps = [];
+
+for(let property in beagle){
+    if(beagle.hasOwnProperty(property)){
+        ownProps.push(property);
+    }else{
+        prototypeProps.push(property);
+    }
+}
+
+console.log(ownProps);
+console.log(prototypeProps);
