@@ -1,6 +1,14 @@
 // Iterate Over All Properties
 
-function returnprop(p1){
+const person = {
+    name: "ashley",
+    age: 21,
+    email: "ashley@email.com",
+    location: "nyc"
+}
+function returnProp(p1){
     let prop = p1;
     return prop;
 }
+
+console.log(returnProp("keys"));
