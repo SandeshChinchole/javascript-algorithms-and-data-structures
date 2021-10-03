@@ -1,9 +1,13 @@
 // Understand the Constructor Property
 
-function Bird(name, numOfLegs, color){
+function Dog(name) {
     this.name = name;
-    this.numOfLegs = numOfLegs;
-    this.color = color;
 }
-
-let blueBird = new Bird("aflac", 4, "blue");
+  
+function joinDogFraternity(candidate) {
+    if(candidate.constructor === Dog){
+      return true;
+    }else{
+      return false;
+    }
+}
