@@ -1,17 +1,14 @@
+// Understand the Hazards of Using Imperative Code
 
-const prepareBlackTea = () => "black tea";
-const prepareGreenTea = () => "green tea";
-
-const getTea = (typeOfTea, numOfCups) => {
+const getTea = (prepareTea, numOfCups) => {
     const teaCups = [];
-    for(let cup = 1; cup <= numOfCups; cup++){
-        let teaCup = typeOfTea();
-        teaCups.push(teaCup);
+  
+    for(let cups = 1; cups <= numOfCups; cups += 1) {
+      const teaCup = prepareTea();
+      teaCups.push(teaCup);
     }
     return teaCups;
-};
-
-const tea4GreenTeamFCC = getTea(prepareGreenTea, 27);
-const tea4BlackTeamFCC = getTea(prepareBlackTea, 13);
-
-console.log(tea4BlackTeamFCC, tea4GreenTeamFCC);
+  };
+  
+  const tea4GreenTeamFCC = getTea(prepareBlackTea, 13);
+  const tea4BlackTeamFCC = getTea(prepareGreenTea, 27);
