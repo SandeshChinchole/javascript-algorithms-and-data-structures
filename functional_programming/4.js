@@ -1,14 +1,12 @@
+// Avoid Mutations and Side Effects Using Functional Programming
 
-const getTea = (numOfCups) => {
-    const teaCups = [];
-  
-    for(let cups = 1; cups <= numOfCups; cups += 1) {
-      const teaCup = prepareTea();
-      teaCups.push(teaCup);
-    }
-    return teaCups;
-  };
-  
-  const tea4TeamFCC = getTea(40);
-  
-  console.log(tea4TeamFCC);
+// The global variable
+let fixedValue = 4;
+
+function incrementer() {
+  // Only change code below this line
+  return fixedValue + 1;
+  // Only change code above this line
+}
+
+console.log(incrementer());

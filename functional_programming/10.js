@@ -1,23 +1,17 @@
-// Learn About Functional Programming
+// Implement the filter Method on a Prototype
 
-// Function that returns a string representing a cup of green tea
-const prepareTea = () => 'greenTea';
+const s = [23, 65, 98, 5];
 
-/*
-Given a function (representing the tea type) and number of cups needed, the
-following function returns an array of strings (each representing a cup of
-a specific type of tea).
-*/
-const getTea = (numOfCups) => {
-  const teaCups = [];
-
-  for(let cups = 1; cups <= numOfCups; cups += 1) {
-    const teaCup = prepareTea();
-    teaCups.push(teaCup);
+Array.prototype.myFilter = function(callback) {
+  const newArray = [];
+  for (let i = 0; i < this.length; i++) {
+    if (callback(this[i]) === true) {
+      newArray.push(this[i]);
+    }
   }
-  return teaCups;
+  return newArray;
 };
 
-const tea4TeamFCC = getTea(40);
-
-console.log(tea4TeamFCC);
+const new_s = s.myFilter(function(item) {
+  return item % 2 === 1;
+});

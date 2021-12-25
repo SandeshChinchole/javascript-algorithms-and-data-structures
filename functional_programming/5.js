@@ -1,15 +1,9 @@
+// Pass Arguments to Avoid External Dependence in a Function
 
+let fixedValue = 4;
 
-const getTea = (numOfCups) => {
-    const teaCups = [];
-  
-    for(let cups = 1; cups <= numOfCups; cups += 1) {
-      const teaCup = prepareTea();
-      teaCups.push(teaCup);
-    }
-    return teaCups;
-  };
-  
-  const tea4TeamFCC = getTea(40);
-  
-  console.log(tea4TeamFCC);
+function incrementer(arg) {
+  return arg + 1;
+}
+
+console.log(incrementer(fixedValue));

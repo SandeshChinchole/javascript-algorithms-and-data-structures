@@ -1,12 +1,8 @@
-const getTea = (prepareTea, numOfCups) => {
-    const teaCups = [];
-  
-    for(let cups = 1; cups <= numOfCups; cups += 1) {
-      const teaCup = prepareTea();
-      teaCups.push(teaCup);
-    }
-    return teaCups;
-  };
-  
-  const tea4GreenTeamFCC = getTea(prepareBlackTea, 13);
-  const tea4BlackTeamFCC = getTea(prepareGreenTea, 27);
+// Return Part of an Array Using the slice Method
+
+function sliceArray(anim, beginSlice, endSlice) {
+  return anim.slice(beginSlice, endSlice);
+}
+
+const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);

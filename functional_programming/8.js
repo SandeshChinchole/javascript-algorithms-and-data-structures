@@ -1,13 +1,15 @@
-const getTea = (numOfCups) => {
-    const teaCups = [];
-  
-    for(let cups = 1; cups <= numOfCups; cups += 1) {
-      const teaCup = prepareTea();
-      teaCups.push(teaCup);
-    }
-    return teaCups;
-  };
-  
-  const tea4TeamFCC = getTea(40);
-  
-  console.log(tea4TeamFCC);
+// Implement map on a Prototype
+
+const s = [23, 65, 98, 5];
+
+Array.prototype.myMap = function(callback) {
+  const newArray = [];
+  for (let i = 0; i < this.length; i++) {
+    newArray.push(callback(this[i]));
+  }
+  return newArray;
+};
+
+const new_s = s.myMap(function(item) {
+  return item * 2;
+});
